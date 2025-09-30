@@ -375,43 +375,124 @@
                     <div class="bg-gray-50 p-8 rounded-2xl">
                         <h3 class="text-2xl font-bold mb-6">Book Appointment</h3>
                         <form class="space-y-4">
+                            <!-- Name Fields -->
                             <div class="grid grid-cols-2 gap-4">
-                                <input type="text" placeholder="First Name" id="firstName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
-                                <input type="text" placeholder="Last Name" id="lastName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                                <input type="text" placeholder="First Name" id="firstName" name="firstName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                                <input type="text" placeholder="Last Name" id="lastName" name="lastName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
                             </div>
-                            <input type="email" placeholder="Email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
-                            <input type="tel" placeholder="Phone" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
-                            <label class="block font-semibold">Choose Service:</label>
-                            <select id="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
-                                <option value="">Choose one</option>
-                                <option>Basic Nail Gel - Rp 80.000</option>
-                                <option>Soft Gel Tip - Rp 110.000</option>
-                                <option>Half Tip Gel - Rp 100.000</option>
-                                <option>Press On Nails - Rp 60.000</option>
-                                <option>Russian Manicure - Rp 70.000</option>
-                                <option>Manicure Only - Rp 40.000</option>
-                            </select>
-                            <label class="block font-semibold mt-4">Add On:</label>
-                            <select id="addon" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
-                                <option value="">Choose one</option>
-                                <option>Overlay/BIAB - Rp 50.000</option>
-                                <option>3D Art - Rp 55.000</option>
-                                <option>Art (Gel Polish) - Rp 40.000</option>
-                                <option>Ombre - Rp 20.000</option>
-                                <option>French Nails - Rp 30.000</option>
-                                <option>Glitter/Foil - Rp 20.000</option>
-                                <option>Cat Eye - Rp 20.000</option>
-                                <option>Accessories (start from Rp 3.000)</option>
-                                <option>Sticker - Rp 10.000</option>
-                                <option>Chrome - Rp 40.000</option>
-                            </select>
-                            <textarea id="notes" placeholder="Additional Notes" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+                            <!-- Contact Fields -->
+                            <input type="email" placeholder="Email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            <input type="tel" placeholder="Phone" id="phone" name="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            <!-- Services Checklist -->
+                            <details class="bg-white rounded-lg border border-gray-300 p-4">
+                                <summary class="font-semibold cursor-pointer">Choose Service</summary>
+                                <div class="mt-4 space-y-2">
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" name="service[]" value="Basic Nail Gel - Rp 80.000">
+                                        <span>Basic Nail Gel - Rp 80.000</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" name="service[]" value="Soft Gel Tip - Rp 110.000">
+                                        <span>Soft Gel Tip - Rp 110.000</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" name="service[]" value="Half Tip Gel - Rp 140.000">
+                                        <span>Half Tip Gel - Rp 140.000</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" name="service[]" value="Press On Nails - Rp 60.000">
+                                        <span>Press On Nails - Rp 60.000</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" name="service[]" value="Russian Manicure - Rp 30.000">
+                                        <span>Russian Manicure - Rp 30.000</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" name="service[]" value="Remove - Rp 40.000">
+                                        <span>Remove - Rp 40.000</span>
+                                    </label>
+                                </div>
+                            </details>
+                            <!-- Add-On Checklist -->
+                            <details class="bg-white rounded-lg border border-gray-300 p-4">
+                                <summary class="font-semibold cursor-pointer">Add On</summary>
+                                <div class="mt-4 space-y-2">
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" name="addon[]" value="Overlay/BIAB - Rp 5.000">
+                                        <span>Overlay/BIAB - Rp 5.000</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" name="addon[]" value="3D Art - Rp 5.000">
+                                        <span>3D Art - Rp 5.000</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" name="addon[]" value="Art (Gel Polish) - Rp 3.500">
+                                        <span>Art (Gel Polish) - Rp 3.500</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" name="addon[]" value="Ombre - Rp 4.000">
+                                        <span>Ombre - Rp 4.000</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" name="addon[]" value="French Nails - Rp 3.000">
+                                        <span>French Nails - Rp 3.000</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" name="addon[]" value="Glitter/Foil - Rp 2.000">
+                                        <span>Glitter/Foil - Rp 2.000</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" name="addon[]" value="Cat Eye - Rp 2.500">
+                                        <span>Cat Eye - Rp 2.500</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" name="addon[]" value="Accessories (start from Rp 3.000)">
+                                        <span>Accessories (start from Rp 3.000)</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" name="addon[]" value="Sticker - Rp 1.000">
+                                        <span>Sticker - Rp 1.000</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" name="addon[]" value="Chrome - Rp 4.000">
+                                        <span>Chrome - Rp 4.000</span>
+                                    </label>
+                                </div>
+                            </details>
+                            <!-- Notes -->
+                            <textarea id="notes" name="notes" placeholder="Additional Notes" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+                            <!-- Submit Button -->
                             <button id="bookNowBtn" class="w-full bg-pink-500 text-white py-3 rounded-lg font-semibold hover:bg-pink-600 transition-colors">
                                 Book Now
 </button>
                         </form>
                     </div>
-                    <!-- ✅ Script placed outside the form and div -->
+                    <!-- WhatsApp Redirect Script -->
+                    <script>
+  document.getElementById("bookNowBtn").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const firstName = document.getElementById("firstName").value.trim();
+    const lastName = document.getElementById("lastName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const notes = document.getElementById("notes").value.trim();
+
+    const services = Array.from(document.querySelectorAll("input[name='service[]']:checked"))
+      .map(el => el.value)
+      .join(", ");
+
+    const addons = Array.from(document.querySelectorAll("input[name='addon[]']:checked"))
+      .map(el => el.value)
+      .join(", ");
+
+    const message = `Hello Trixy Nails! I'd like to book an appointment.\n\nName: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\n\nServices: ${services}\nAdd-ons: ${addons}\nNotes: ${notes}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappNumber = "6281319810565"; // Replace with your actual number
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
+  });
+</script>
                     <script>
   document.getElementById("bookNowBtn").addEventListener("click", function () {
     const firstName = document.getElementById("firstName").value.trim();
@@ -591,6 +672,36 @@ Notes: ${notes}`;
       resultBox.innerHTML = resultHTML;
       resultBox.style.opacity = 1;
     };
+  });
+</script>
+        <script>
+  document.getElementById("bookNowBtn").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Collect values
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const notes = document.getElementById("notes").value;
+
+    // Collect checked services
+    const services = Array.from(document.querySelectorAll("input[name='service[]']:checked"))
+      .map(el => el.value)
+      .join(", ");
+
+    // Collect checked add-ons
+    const addons = Array.from(document.querySelectorAll("input[name='addon[]']:checked"))
+      .map(el => el.value)
+      .join(", ");
+
+    // Format message
+    const message = `Hello Trixy Nails! I'd like to book an appointment.\n\nName: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\n\nServices: ${services}\nAdd-ons: ${addons}\nNotes: ${notes}`;
+
+    // WhatsApp redirect
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappNumber = "6281234567890"; // Replace with your salon's number
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
   });
 </script>
     </body>
