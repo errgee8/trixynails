@@ -1,95 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <style>
-  .flip-card {
-    perspective: 1000px;
-  }
-
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-
-  .flip-card.flipped .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-
-  .flip-card-front,
-  .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 1rem;
-    padding: 1rem;
-  }
-
-  .flip-card-back {
-    transform: rotateY(180deg);
-  }
-</style>
-        <style>
-  @keyframes rainbowPulse {
-    0% { background-color: #ff80ab; box-shadow: 0 0 10px #ff80ab; }
-    25% { background-color: #ffb74d; box-shadow: 0 0 10px #ffb74d; }
-    50% { background-color: #81d4fa; box-shadow: 0 0 10px #81d4fa; }
-    75% { background-color: #aed581; box-shadow: 0 0 10px #aed581; }
-    100% { background-color: #ff80ab; box-shadow: 0 0 10px #ff80ab; }
-  }
-
-  .rainbow-button {
-    animation: rainbowPulse 5s infinite;
-    border: none;
-    cursor: pointer;
-  }
-
-  .rainbow-button:hover {
-    transform: scale(1.05);
-  }
-</style>
+        <link rel="stylesheet" href="css/style.css">
+        <style>.flip-card { perspective: 1000px; } .flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.8s; transform-style: preserve-3d; } .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); } .flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 1rem; padding: 1rem; } .flip-card-back { transform: rotateY(180deg); }</style>
+        <style>@keyframes rainbowPulse { 0% {  background-color: #ff80ab;  box-shadow: 0 0 10px #ff80ab; }  25% {  background-color: #ffb74d;  box-shadow: 0 0 10px #ffb74d; }  50% {  background-color: #81d4fa;  box-shadow: 0 0 10px #81d4fa; }  75% {  background-color: #aed581;  box-shadow: 0 0 10px #aed581; }  100% {  background-color: #ff80ab;  box-shadow: 0 0 10px #ff80ab; } } .rainbow-button { animation: rainbowPulse 5s infinite; border: none; cursor: pointer; } .rainbow-button:hover { transform: scale(1.05); }</style>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
         <!-- Custom Arrow Labels -->
-        <style>
-  .swiper-button-prev::after {
-    content: "← Swipe left";
-    font-size: 0.75rem;
-    color: #ec4899; /* pink-500 */
-    padding-left: 0.5rem;
-  }
-
-  .swiper-button-next::after {
-    content: "Swipe right →";
-    font-size: 0.75rem;
-    color: #ec4899;
-    padding-right: 0.5rem;
-  }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 0.5rem 0.75rem;
-    border-radius: 9999px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .swiper-button-prev:hover,
-  .swiper-button-next:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-</style>
+        <style>.swiper-button-prev::after { content: "← Swipe left"; font-size: 0.75rem; color: #ec4899;  /* pink-500 */ padding-left: 0.5rem; } .swiper-button-next::after { content: "Swipe right →"; font-size: 0.75rem; color: #ec4899; padding-right: 0.5rem; } .swiper-button-prev, .swiper-button-next { top: 50%; transform: translateY(-50%); background-color: rgba(255, 255, 255, 0.6); padding: 0.5rem 0.75rem; border-radius: 9999px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); } .swiper-button-prev:hover, .swiper-button-next:hover { background-color: rgba(255, 255, 255, 0.9); }</style>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Trixy Nails - Premium Nail Salon</title>
         <meta name="description" content="Premium nail care services with a touch of luxury and creativity at Trixy Nails">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); body { font-family: 'Poppins', sans-serif; } .nav-blur { backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.9); } .gradient-text { background: linear-gradient(135deg, #FF6B95 0%, #FF8E53 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; } .hero-gradient { background: linear-gradient(135deg, #FF6B95 0%, #FF8E53 100%); } .service-card { transition: all 0.3s ease; } .service-card:hover { transform: translateY(-10px); }</style>
-        <link href="tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="../trixy/tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
+        <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet" type="text/css">
     </head>
     <body class="bg-white">
         <!-- Navigation -->
@@ -131,7 +57,7 @@
                     </div>
                     <div class="md:w-1/2 relative">
                         <div class="relative z-10">
-                            <img src="pexels-cottonbro-4813347.jpg" alt="Beautiful nail art design with pink and white colors" class="rounded-2xl shadow-2xl" loading="lazy" style="margin-top: -255px;">
+                            <img src="images/pexels-cottonbro-4813347.jpg" alt="Beautiful nail art design with pink and white colors" class="rounded-2xl shadow-2xl" loading="lazy" style="margin-top: -255px;">
                             <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl">
                                 <div class="text-center">
                                     <div class="text-3xl font-bold text-pink-500">100+</div>
@@ -384,7 +310,7 @@
                 <div class="flex flex-col md:flex-row items-center justify-between">
                     <!-- Image Section -->
                     <div class="md:w-1/2 mb-10 md:mb-0">
-                        <img src="fotto-export-68dbb049d32a3061de8ef6c7.png" alt="Trixy Nails salon interior with modern decor" class="rounded-2xl shadow-2xl" loading="lazy">
+                        <img src="images/fotto-export-68dbb049d32a3061de8ef6c7.png" alt="Trixy Nails salon interior with modern decor" class="rounded-2xl shadow-2xl" loading="lazy">
                     </div>
                     <!-- Text Section -->
                     <div class="md:w-1/2 md:pl-12">
